@@ -15,7 +15,7 @@ searchButton.addEventListener('click', function(){
 })
 async function getSity(data){
     try{
-        const url = `http://api.openweathermap.org/geo/1.0/direct?q=${data}&limit=1&appid=24f517c2ec2ed505707ede99a09af491`;
+        const url = `https://api.openweathermap.org/geo/1.0/direct?q=${data}&limit=1&appid=24f517c2ec2ed505707ede99a09af491`;
         const response = await fetch(url);
         // console.log(response);
         const sity = await response.json();
