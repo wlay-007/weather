@@ -16,7 +16,7 @@ body{
     position: relative;
     margin: 0 auto;
     width: 300px;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,6 +42,7 @@ body{
     justify-content: center;
 }
 .header__input-sity{
+    position: relative;
     gap: 10px;
     display: flex;
     flex-direction: row;
@@ -51,13 +52,15 @@ body{
     justify-content: center;
     border: 1px black solid;
     outline: none;
-    border-radius: 25px;
-    width: 150px;
+    border-radius: 15px;
+    width: 200px;
     font-size: 1.5rem;
-    padding: 0 10px;
-    height: 30px;
+    padding: 10px 40px 10px 10px;
 }
 .header__search-button{
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
     border: 0;
     outline: none;
     background-color: rgb(255, 255, 255);
@@ -79,4 +82,11 @@ body{
     100% {
         transform: scale(1.4) 
     }
+}
+svg{
+    transition: 1s;
+}
+svg:hover{
+    fill: gray;
+    transition: 1s;
 }

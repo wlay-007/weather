@@ -27,7 +27,12 @@ async function getSity(data){
 
     }
     catch{
-        alert('There is no such city');
+        if(textInput.length == 0){
+            alert('Empty line');
+        }
+        else{
+            alert('There is no such city');
+        }
     }
 
 }
