@@ -90,3 +90,16 @@ svg:hover{
     fill: gray;
     transition: 1s;
 }
+.main__lounch{
+    display: none;
+}
+.active{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.logo{
+    font-weight: 100;
+}

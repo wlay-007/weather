@@ -1,3 +1,4 @@
+const lounchIcon = document.querySelector('.main__lounch');
 const sityName = document.querySelector('.main__name-value');
 const searchButton = document.querySelector('.header__search-button')
 const sityValue = document.querySelector('.header__input-sity-value')
@@ -7,6 +8,19 @@ const circle = document.querySelector('.main__circle')
 let textInput = '';
 let lat = null;
 let lon = null;
+
+
+function succses(pos){
+    // console.log(pos.coords.latitude, pos.coords.longitude);
+    lat = pos.coords.latitude;
+    lon = pos.coords.longitude;
+    getData(lat, lon);
+}
+function error(){
+    lounchIcon.classList.add('active');
+}
+navigator.geolocation.getCurrentPosition(succses, error);
+
 
 searchButton.addEventListener('click', function(){
     textInput = sityValue.value;
@@ -24,6 +38,7 @@ async function getSity(data){
         lon = sity[0].lon;
         console.log(lat, lon);
         getData(lat, lon);
+        lounchIcon.classList.remove('active');
 
     }
     catch{
